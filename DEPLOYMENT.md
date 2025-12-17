@@ -131,3 +131,4 @@ Once connected to Git:
 
 **Note**: Make sure to update ThoughtSpot CORS settings to include your Vercel domain for the embeds to work properly!
 
+

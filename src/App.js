@@ -9,6 +9,7 @@ import LeversOptimizer from './pages/LeversOptimizer';
 import MarketExpansion from './pages/MarketExpansion';
 import Segmentation from './pages/Segmentation';
 import CompareAI from './pages/CompareAI';
+import MyReports from './pages/MyReports';
 import './App.css';
 
 function App() {
@@ -22,11 +23,12 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<DashboardLiveboard />} />
+                <Route path="/compareai" element={<CompareAI />} />
+                <Route path="/my-reports" element={<MyReports />} />
                 <Route path="/benchmarking" element={<Benchmarking />} />
                 <Route path="/levers" element={<LeversOptimizer />} />
                 <Route path="/market-expansion" element={<MarketExpansion />} />
                 <Route path="/segmentation" element={<Segmentation />} />
-                <Route path="/compareai" element={<CompareAI />} />
               </Routes>
             </div>
           </div>

@@ -10,6 +10,7 @@ const Sidebar = () => {
     { path: '/', icon: '🏠', label: 'Home', exact: true },
     { path: '/dashboard', icon: '📊', label: 'Dashboard' },
     { path: '/compareai', icon: '🤖', label: 'CompareAI', premium: true },
+    { path: '/my-reports', icon: '📄', label: 'My Reports' },
     { path: '/benchmarking', icon: '📈', label: 'Benchmarking' },
     { path: '/levers', icon: '⚡', label: '4 Levers Optimizer' },
     { path: '/segmentation', icon: '👥', label: 'Segmentation' },

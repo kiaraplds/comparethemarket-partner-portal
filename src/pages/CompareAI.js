@@ -16,6 +16,8 @@ const CompareAI = () => {
       return;
     }
 
+    let spotterEmbed = null;
+    const embedContainer = embedRef.current;
 
     const initSpotter = async () => {
       try {
@@ -35,13 +37,13 @@ const CompareAI = () => {
         const embedHeight = Math.max(500, Math.min(800, viewportHeight * 0.75));
         
         // Create SpotterEmbed instance with the model/worksheet ID
-        const spotterEmbed = new SpotterEmbed(embedRef.current, {
+        spotterEmbed = new SpotterEmbed(embedContainer, {
           frameParams: {
             width: '100%',
             height: `${embedHeight}px`,
           },
           // Use the specific model ID (worksheet/data source)
-          worksheetId: '0f613acf-83bf-41ff-9455-cb3460b45fd4',
+          worksheetId: '0897218d-771e-4352-95e6-69a47f59e621',
           searchOptions: {
             searchQuery: '', // Optional: initial search query
           },
@@ -66,13 +68,8 @@ const CompareAI = () => {
 
         // Render the embed
         console.log('Rendering CompareAI Spotter...');
-        spotterEmbed.render();
+        await spotterEmbed.render();
         setLoading(false);
-
-        // Cleanup on unmount
-        return () => {
-          console.log('Cleaning up CompareAI embed');
-        };
       } catch (err) {
         console.error('❌ Error initializing CompareAI:', err);
         setError(err.message);
@@ -81,6 +78,14 @@ const CompareAI = () => {
     };
 
     initSpotter();
+
+    // Cleanup on unmount
+    return () => {
+      console.log('Cleaning up CompareAI embed');
+      if (embedContainer) {
+        embedContainer.innerHTML = '';
+      }
+    };
   }, [isBasic]);
 
   // If user is basic tier, show upgrade prompt
@@ -110,10 +115,10 @@ const CompareAI = () => {
       <div className="ai-suggestions">
         <p className="suggestions-label">Try asking:</p>
         <div className="suggestions-grid">
-          <div className="suggestion-chip">💰 "What's my total revenue this month?"</div>
-          <div className="suggestion-chip">📈 "Show me conversion trends by age group"</div>
-          <div className="suggestion-chip">🎯 "Which product has the highest growth?"</div>
-          <div className="suggestion-chip">📊 "Compare performance across regions"</div>
+          <div className="suggestion-chip">📋 "How many policies were sold this month?"</div>
+          <div className="suggestion-chip">📈 "Show me policy conversion rates by age group"</div>
+          <div className="suggestion-chip">🎯 "Which policy type has the highest retention?"</div>
+          <div className="suggestion-chip">📊 "Compare policy sales across different segments"</div>
         </div>
       </div>
 

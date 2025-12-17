@@ -37,3 +37,4 @@ const ComingSoon = ({ pageName, icon = '🚧' }) => {
 
 export default ComingSoon;
 
+

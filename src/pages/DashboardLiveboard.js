@@ -60,7 +60,7 @@ const DashboardLiveboard = () => {
             width: '100%',
             height: `${embedHeight}px`,
           },
-          liveboardId: 'c7767448-ed6e-4b44-8032-f8ec642f9e8f',
+          liveboardId: '53f4782e-b80b-4468-a692-7fe478c1bbe5',
           fullHeight: true,
           hideDataSources: true,
           showLiveboardTitle: true,

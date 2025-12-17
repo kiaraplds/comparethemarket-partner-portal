@@ -83,3 +83,4 @@ const UpgradePrompt = ({ featureName = 'CompareAI' }) => {
 
 export default UpgradePrompt;
 
+
