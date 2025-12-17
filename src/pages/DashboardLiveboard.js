@@ -11,6 +11,7 @@ const DashboardLiveboard = () => {
 
   useEffect(() => {
     let embed = null;
+    const embedContainer = embedRef.current;
     
     const initializeEmbed = async () => {
       try {
@@ -134,8 +135,8 @@ const DashboardLiveboard = () => {
     };
 
     // Clear the embed container and reinitialize
-    if (embedRef.current) {
-      embedRef.current.innerHTML = '';
+    if (embedContainer) {
+      embedContainer.innerHTML = '';
     }
     
     initializeEmbed();
@@ -146,8 +147,8 @@ const DashboardLiveboard = () => {
       if (embed) {
         try {
           // Destroy the embed if possible
-          if (embedRef.current) {
-            embedRef.current.innerHTML = '';
+          if (embedContainer) {
+            embedContainer.innerHTML = '';
           }
         } catch (e) {
           console.log('Cleanup error:', e);
