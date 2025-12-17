@@ -1,0 +1,143 @@
+.dashboard-liveboard-page {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 1600px) {
+  .dashboard-liveboard-page {
+    max-width: 1600px;
+  }
+}
+
+.dashboard-liveboard-header {
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0066CC;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  font-size: 15px;
+  color: var(--ctm-text-secondary);
+  line-height: 1.6;
+}
+
+.tier-note {
+  color: #FF9800;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.dashboard-liveboard-container {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 2px solid var(--ctm-border);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1366px) {
+  .dashboard-liveboard-container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+.dashboard-liveboard-embed {
+  width: 100%;
+  min-height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #F9FAFB;
+}
+
+@media (max-width: 1366px) {
+  .dashboard-liveboard-embed {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .dashboard-liveboard-embed {
+    min-height: 800px;
+  }
+}
+
+/* Loading and Error states */
+.embed-loading,
+.embed-error {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.loading-spinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid #E0E0E0;
+  border-top-color: var(--ctm-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.embed-loading p {
+  font-size: 16px;
+  color: var(--ctm-text-secondary);
+  font-weight: 600;
+}
+
+.error-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.error-message {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ctm-dark-gray);
+  margin-bottom: 12px;
+}
+
+.error-help {
+  font-size: 14px;
+  color: var(--ctm-text-secondary);
+  margin-bottom: 12px;
+}
+
+.error-link {
+  color: var(--ctm-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  background: var(--ctm-light-blue);
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.error-link:hover {
+  background: var(--ctm-blue);
+  color: white;
+  transform: translateY(-1px);
+}
+

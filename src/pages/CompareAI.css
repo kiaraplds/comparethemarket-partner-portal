@@ -1,0 +1,252 @@
+.compare-ai-page {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 1600px) {
+  .compare-ai-page {
+    max-width: 1600px;
+  }
+}
+
+.compare-ai-header {
+  margin-bottom: 24px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0066CC;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-icon {
+  font-size: 36px;
+}
+
+.page-subtitle {
+  font-size: 15px;
+  color: var(--ctm-text-secondary);
+  line-height: 1.6;
+}
+
+.ai-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 24px rgba(102, 126, 234, 0.6);
+  }
+}
+
+.badge-icon {
+  font-size: 20px;
+}
+
+.badge-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* AI Suggestions */
+.ai-suggestions {
+  background: linear-gradient(135deg, #f6f8fc 0%, #e9eef9 100%);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 2px solid #e0e7ff;
+}
+
+.suggestions-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ctm-dark-gray);
+  margin-bottom: 16px;
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.suggestion-chip {
+  padding: 12px 16px;
+  background: white;
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ctm-dark-gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestion-chip:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* AI Container */
+.compare-ai-container {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 2px solid var(--ctm-border);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1366px) {
+  .compare-ai-container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
+
+.compare-ai-embed {
+  width: 100%;
+  min-height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #F9FAFB;
+}
+
+@media (max-width: 1366px) {
+  .compare-ai-embed {
+    min-height: 500px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .compare-ai-embed {
+    min-height: 800px;
+  }
+}
+
+/* Loading and Error states */
+.embed-loading,
+.embed-error {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.loading-spinner {
+  width: 56px;
+  height: 56px;
+  border: 5px solid #E0E0E0;
+  border-top-color: #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.embed-loading p {
+  font-size: 16px;
+  color: var(--ctm-text-secondary);
+  font-weight: 600;
+}
+
+.error-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.error-message {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ctm-dark-gray);
+  margin-bottom: 12px;
+}
+
+.error-help {
+  font-size: 14px;
+  color: var(--ctm-text-secondary);
+  margin-bottom: 12px;
+}
+
+.error-link {
+  color: var(--ctm-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  background: var(--ctm-light-blue);
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.error-link:hover {
+  background: var(--ctm-blue);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 24px;
+  }
+
+  .ai-icon {
+    font-size: 28px;
+  }
+
+  .suggestions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .ai-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

@@ -1,0 +1,149 @@
+.thoughtspot-embed-container {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+  border: 2px solid var(--ctm-border);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1366px) {
+  .thoughtspot-embed-container {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+
+.embed-header {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #F0F0F0;
+}
+
+.embed-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ctm-dark-gray);
+  margin-bottom: 6px;
+}
+
+.embed-subtitle {
+  font-size: 13px;
+  color: var(--ctm-text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 1366px) {
+  .embed-title {
+    font-size: 18px;
+  }
+  
+  .embed-subtitle {
+    font-size: 12px;
+  }
+}
+
+.thoughtspot-embed {
+  width: 100%;
+  min-height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #F9FAFB;
+}
+
+@media (max-width: 1366px) {
+  .thoughtspot-embed {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .thoughtspot-embed {
+    min-height: 700px;
+  }
+}
+
+/* Loading state */
+.thoughtspot-embed:empty::after {
+  content: 'Loading ThoughtSpot analytics...';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  font-size: 14px;
+  color: var(--ctm-text-secondary);
+  font-weight: 600;
+}
+
+.embed-loading,
+.embed-error {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #E0E0E0;
+  border-top-color: var(--ctm-blue);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.error-message {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ctm-dark-gray);
+  margin-bottom: 8px;
+}
+
+.error-help {
+  font-size: 13px;
+  color: var(--ctm-text-secondary);
+  margin-bottom: 8px;
+}
+
+.error-link {
+  color: var(--ctm-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.error-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .thoughtspot-embed-container {
+    padding: 16px;
+  }
+
+  .embed-title {
+    font-size: 18px;
+  }
+
+  .thoughtspot-embed {
+    min-height: 400px;
+  }
+}
+
+
